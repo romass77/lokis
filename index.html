@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuotraukų galerija</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<body>
+  <div class="gallery">
+    <header>
+        <div class="heder">
+            <p><span id="current-date"></span></p>
+          <!--  <ul>
+                <li><a href="#" style="text-decoration: none;">Sing Up </a></li>
+                <li><a href="#" style="text-decoration: none;">Login  </a></li>
+            </ul> -->
+            <button id="toggleMenu">Meniu</button>
+            <nav id="menu" class="menu">
+              <ul>
+                <li><a href="#">Pagrindinis</a></li>
+                <li><a href="#">Apie Mus</a></li>
+                <li class="submenu">
+                  <a href="#">Paslaugos</a>
+                  <ul class="submenu-items">
+                    <li><a href="#">Pirma Paslauga</a></li>
+                    <li><a href="#">Antra Paslauga</a></li>
+                    <li><a href="#">Trečia Paslauga</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Kontaktai</a></li>
+              </ul>
+            </nav>  
+            
+            
+        </div>
+  </header>
+    <div class="thumbnails">
+      <img src="/img/1.jpg" alt="Nuotrauka 1" onclick="openModal();currentSlide(1)" class="thumbnail">
+      <img src="/img/2.jpg" alt="Nuotrauka 2" onclick="openModal();currentSlide(2)" class="thumbnail">
+      <img src="/img/3.jpg" alt="Nuotrauka 3" onclick="openModal();currentSlide(3)" class="thumbnail">
+      <img src="/img/4.jpg" alt="Nuotrauka 4" onclick="openModal();currentSlide(4)" class="thumbnail">
+      <img src="/img/5.jpg" alt="Nuotrauka 5" onclick="openModal();currentSlide(5)" class="thumbnail">
+      <img src="/img/6.jpg" alt="Nuotrauka 6" onclick="openModal();currentSlide(6)" class="thumbnail">
+      <img src="/img/7.jpg" alt="Nuotrauka 7" onclick="openModal();currentSlide(7)" class="thumbnail">
+      <img src="/img/8.jpg" alt="Nuotrauka 8" onclick="openModal();currentSlide(8)" class="thumbnail">
+      <img src="/img/9.jpg" alt="Nuotrauka 9" onclick="openModal();currentSlide(9)" class="thumbnail">
+      <img src="/img/10.jpg" alt="Nuotrauka 10" onclick="openModal();currentSlide(10)" class="thumbnail">
+      <img src="/img/11.jpg" alt="Nuotrauka 11" onclick="openModal();currentSlide(11)" class="thumbnail">
+      <img src="/img/12.jpg" alt="Nuotrauka 12" onclick="openModal();currentSlide(12)" class="thumbnail">
+      <img src="/img/13.jpg" alt="Nuotrauka 13" onclick="openModal();currentSlide(13)" class="thumbnail">
+      <img src="/img/14.jpg" alt="Nuotrauka 14" onclick="openModal();currentSlide(14)" class="thumbnail">
+      <img src="/img/15.jpg" alt="Nuotrauka 15" onclick="openModal();currentSlide(15)" class="thumbnail">
+      <img src="/img/16.jpg" alt="Nuotrauka 16" onclick="openModal();currentSlide(16)" class="thumbnail">
+      <img src="/img/17.jpg" alt="Nuotrauka 17" onclick="openModal();currentSlide(17)" class="thumbnail">
+      <img src="/img/18.jpg" alt="Nuotrauka 18" onclick="openModal();currentSlide(18)" class="thumbnail">
+      <img src="/img/19.jpg" alt="Nuotrauka 19" onclick="openModal();currentSlide(19)" class="thumbnail">
+      <img src="/img/20.jpg" alt="Nuotrauka 20" onclick="openModal();currentSlide(20)" class="thumbnail">
+      <img src="/img/21.jpg" alt="Nuotrauka 21" onclick="openModal();currentSlide(21)" class="thumbnail">
+      <img src="/img/22.jpg" alt="Nuotrauka 22" onclick="openModal();currentSlide(22)" class="thumbnail">
+      <img src="/img/23.jpg" alt="Nuotrauka 23" onclick="openModal();currentSlide(23)" class="thumbnail">
+      <img src="/img/24.jpg" alt="Nuotrauka 24" onclick="openModal();currentSlide(24)" class="thumbnail">
+      <img src="/img/25.jpg" alt="Nuotrauka 25" onclick="openModal();currentSlide(25)" class="thumbnail">
+      <img src="/img/26.jpg" alt="Nuotrauka 26" onclick="openModal();currentSlide(26)" class="thumbnail">
+      <img src="/img/27.jpg" alt="Nuotrauka 27" onclick="openModal();currentSlide(27)" class="thumbnail">
+      <img src="/img/28.jpg" alt="Nuotrauka 28" onclick="openModal();currentSlide(28)" class="thumbnail">
+      <img src="/img/29.jpg" alt="Nuotrauka 29" onclick="openModal();currentSlide(29)" class="thumbnail">
+      <img src="/img/30.jpg" alt="Nuotrauka 30" onclick="openModal();currentSlide(30)" class="thumbnail">
+      <img src="/img/31.jpg" alt="Nuotrauka 31" onclick="openModal();currentSlide(31)" class="thumbnail">
+      <img src="/img/32.jpg" alt="Nuotrauka 32" onclick="openModal();currentSlide(32)" class="thumbnail">
+      <img src="/img/33.jpg" alt="Nuotrauka 33" onclick="openModal();currentSlide(33)" class="thumbnail">
+      <img src="/img/34.jpg" alt="Nuotrauka 34" onclick="openModal();currentSlide(34)" class="thumbnail">
+      <img src="/img/35.jpg" alt="Nuotrauka 35" onclick="openModal();currentSlide(35)" class="thumbnail">
+      <img src="/img/36.jpg" alt="Nuotrauka 36" onclick="openModal();currentSlide(36)" class="thumbnail">
+      <img src="/img/37.jpg" alt="Nuotrauka 37" onclick="openModal();currentSlide(37)" class="thumbnail">
+      <img src="/img/38.jpg" alt="Nuotrauka 38" onclick="openModal();currentSlide(38)" class="thumbnail">
+     
+    </div>
+
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <img src="/img/1.jpg" alt="Nuotrauka 1" class="slide">
+        <img src="/img/2.jpg" alt="Nuotrauka 2" class="slide">
+        <img src="/img/3.jpg" alt="Nuotrauka 3" class="slide">
+        <img src="/img/4.jpg" alt="Nuotrauka 4" class="slide">
+        <img src="/img/5.jpg" alt="Nuotrauka 5" class="slide">
+        <img src="/img/6.jpg" alt="Nuotrauka 6" class="slide">
+        <img src="/img/7.jpg" alt="Nuotrauka 7" class="slide">
+        <img src="/img/8.jpg" alt="Nuotrauka 8" class="slide">
+        <img src="/img/9.jpg" alt="Nuotrauka 9" class="slide">
+        <img src="/img/10.jpg" alt="Nuotrauka 10" class="slide">
+        <img src="/img/11.jpg" alt="Nuotrauka 11" class="slide">
+        <img src="/img/12.jpg" alt="Nuotrauka 12" class="slide">
+        <img src="/img/13.jpg" alt="Nuotrauka 13" class="slide">
+        <img src="/img/14.jpg" alt="Nuotrauka 14" class="slide">
+        <img src="/img/15.jpg" alt="Nuotrauka 15" class="slide">
+        <img src="/img/16.jpg" alt="Nuotrauka 16" class="slide">
+        <img src="/img/17.jpg" alt="Nuotrauka 17" class="slide">
+        <img src="/img/18.jpg" alt="Nuotrauka 18" class="slide">
+        <img src="/img/19.jpg" alt="Nuotrauka 19" class="slide">
+        <img src="/img/20.jpg" alt="Nuotrauka 20" class="slide">
+        <img src="/img/21.jpg" alt="Nuotrauka 21" class="slide">
+        <img src="/img/22.jpg" alt="Nuotrauka 22" class="slide">
+        <img src="/img/23.jpg" alt="Nuotrauka 23" class="slide">
+        <img src="/img/24.jpg" alt="Nuotrauka 24" class="slide">
+        <img src="/img/25.jpg" alt="Nuotrauka 25" class="slide">
+        <img src="/img/26.jpg" alt="Nuotrauka 26" class="slide">
+        <img src="/img/27.jpg" alt="Nuotrauka 27" class="slide">
+        <img src="/img/28.jpg" alt="Nuotrauka 28" class="slide">
+        <img src="/img/29.jpg" alt="Nuotrauka 29" class="slide">
+        <img src="/img/30.jpg" alt="Nuotrauka 30" class="slide">
+        <img src="/img/31.jpg" alt="Nuotrauka 31" class="slide">
+        <img src="/img/32.jpg" alt="Nuotrauka 32" class="slide">
+        <img src="/img/33.jpg" alt="Nuotrauka 33" class="slide">
+        <img src="/img/34.jpg" alt="Nuotrauka 34" class="slide">
+        <img src="/img/35.jpg" alt="Nuotrauka 35" class="slide">
+        <img src="/img/36.jpg" alt="Nuotrauka 36" class="slide">
+        <img src="/img/37.jpg" alt="Nuotrauka 37" class="slide">
+        <img src="/img/38.jpg" alt="Nuotrauka 38" class="slide">
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+   <!--  <div class="footer-initials">JK</div> -->
+      <p>&copy; 2024 Lokis</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
